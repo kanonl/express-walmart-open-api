@@ -12,8 +12,15 @@ const express = require('express'),
     app = express();
 
 const config = (req, res, next) => {
-    req.config = JSON.parse(fs.readFileSync(path.join(__dirname, 'config.json'), 'utf8'));
-    next();
+    try {
+        req.config = JSON.parse(fs.readFileSync(path.join(__dirname, 'config.json'), 'utf8'));
+    } catch (err) {
+        req.config = {
+            apiKey: process.env.API_KEY,
+            walmartlabsUrl: process.env.WALMARTLABS_URL
+        };
+    }
+    finally { next(); }
 };
 
 app.set('views', path.join(__dirname, 'views'));
