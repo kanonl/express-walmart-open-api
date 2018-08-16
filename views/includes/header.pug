@@ -1,0 +1,18 @@
+header.container-fluid
+    .row
+        .col-md-4
+            a(href="/")
+                img(src="/images/wmt_h_r_c.jpg" width="328" alt="Walmart Open API" title="Walmart Open API")
+        .col-md-4.vcenter
+            form(action="/search" method="GET")
+                .input-group
+                    input.form-control(type="text" id="search" name="q" required)
+                    .input-group-append
+                        button.btn.btn-outline-secondary(type="submit" id="button-addon") Search
+        .col-md-4
+    nav.nav.justify-content-center
+        each category, index in categories
+            if index < 12
+                - let url_value = `/c/${category.id}/${encodeURI(category.name.toString().toLowerCase().replace(/[^a-z0-9 ]/ig, '').replace(/\s+/g, '-'))}`
+                a.nav-link(href=url_value)= category.name
+    hr.clearfix

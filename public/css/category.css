@@ -1,0 +1,28 @@
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item {
+    width: 225px;
+    font-size: 12px;
+    margin: .5rem;
+    margin-left: 0;
+    padding: .5rem;
+}
+
+.item .name {
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+.item ul {
+    list-style:none;
+    padding: 0;
+    margin: 0;
+}
+
+.item img {
+    width: 100%;
+}

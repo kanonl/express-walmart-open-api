@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+    include includes/head
+    link(href="/css/category.css" rel="stylesheet")
+    body
+        include includes/header
+        main.container-fluid(role="main")
+            .items
+                each item in items
+                    if item.stock === 'Available'
+                        .item
+                            - let productURL = `/p/${item.itemId}/${encodeURI(item.name.toString().toLowerCase().replace(/[^a-z0-9 ]/ig, '').replace(/\s+/g, '-'))}`
+                            a(href=productURL): img(src=item.largeImage alt=item.name title=item.name)                            
+                            -
+                                if (item.name.length > 70)
+                                    item.name = item.name.substring(0, 70) + ' ...'
+                            a.name(href=productURL)= item.name
+                            ul
+                                if item.modelNumber
+                                    li.modelNumber= item.modelNumber
+                                //- li.categoryPath= item.categoryPath
+                                if item.msrp
+                                    li.msrp= item.msrp.toFixed(2)
+                                if item.salePrice
+                                    li.salePrice= item.salePrice.toFixed(2)
+                                li.customerRatingImage
+                                    img(src=item.customerRatingImage)
+                                    //- span.numReviews= item.numReviews
+                                //- li.customerRating= item.customerRating
+        include includes/footer

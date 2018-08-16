@@ -1,0 +1,67 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 16px;
+}
+
+.name {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.customerRatingImage img {
+    width: 60px !important;
+}
+
+.msrp::before,
+.salePrice::before {
+    content: '$';
+}
+
+.msrp {
+    text-decoration: line-through;
+}
+
+.longDescription {
+    margin: 2.5rem 0;
+}
+
+.footer {
+    font-size: 12px;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.numReviews {
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.salePrice {
+    color: red;
+}
+
+.nav {
+    background-color: #eeeeee;
+}
+
+.nav-link {
+    font-size: 12px;
+    color: #000;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+
+.vcenter {
+    display: inline-grid;
+    align-items: center;
+}
+
+.form-control:focus{
+    box-shadow: none !important;
+    border-color: #ced4da;
+    /* border-radius: 0; */
+}
+
+#button-addon {
+    border-color: #cccccc;
+}

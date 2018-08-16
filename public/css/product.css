@@ -1,0 +1,65 @@
+img.thumbnail {
+    border: 1px solid #eee;
+    margin: 4px 4px 0 0;
+    width: 100px;
+    height: 100px;
+}
+
+.nbp {
+    display: flex;
+    justify-content: center;
+}
+.nbp-item {
+    width: 200px;
+    margin-right: 0.25rem;
+    text-align: center;
+}
+
+.compare-similar-items,
+.customer-reviews {
+    margin: 1rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.review-item {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 1rem;
+}
+
+.review-item img {
+    margin: 1rem 0;
+}
+
+.review-lead {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 22px;    
+}
+
+.reviews {
+    font-size: 12px;
+}
+
+.categoryPath {
+    font-size: 12px;
+}
+
+.productUrl {
+    font-size: 18px;
+}
+
+table th {
+    text-transform: uppercase;
+}
+
+table {
+    font-size: 12px;
+}
+
+div.numReviews {
+    font-size: 12px;
+    margin: 1rem 0;
+}
+
+div.numReviews img {
+    margin-right: .5rem;
+}
