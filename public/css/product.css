@@ -5,16 +5,6 @@ img.thumbnail {
     height: 100px;
 }
 
-.nbp {
-    display: flex;
-    justify-content: center;
-}
-.nbp-item {
-    width: 200px;
-    margin-right: 0.25rem;
-    text-align: center;
-}
-
 .compare-similar-items,
 .customer-reviews {
     margin: 1rem 0;
@@ -62,4 +52,8 @@ div.numReviews {
 
 div.numReviews img {
     margin-right: .5rem;
+}
+
+.owl-carousel .item {
+    text-align: center;
 }

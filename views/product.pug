@@ -1,6 +1,8 @@
 doctype html
 html(lang="en")
     include includes/head
+    link(href="/libs/OwlCarousel2/owl.carousel.min.css" rel="stylesheet")
+    link(href="/libs/OwlCarousel2/owl.theme.default.min.css" rel="stylesheet")
     link(href="/css/product.css" rel="stylesheet")
     body
         include includes/header
@@ -29,22 +31,25 @@ html(lang="en")
                     hr
                     <table class="table table-striped">
                         <tbody>
-                            <tr>
-                                <th scope="row">age</th>
-                                <td>#{age}</td>
-                            </tr>
+                            if age
+                                <tr>
+                                    <th scope="row">age</th>
+                                    <td>#{age}</td>
+                                </tr>
                             <tr>
                                 <th scope="row">brand</th>
                                 <td>#{brandName}</td>
                             </tr>
-                            <tr>
-                                <th scope="row">color</th>
-                                <td>#{color}</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">gender</th>
-                                <td>#{gender}</td>
-                            </tr>
+                            if color
+                                <tr>
+                                    <th scope="row">color</th>
+                                    <td>#{color}</td>
+                                </tr>
+                            if gender
+                                <tr>
+                                    <th scope="row">gender</th>
+                                    <td>#{gender}</td>
+                                </tr>
                             <tr>
                                 <th scope="row">model</th>
                                 <td>#{modelNumber}</td>
@@ -60,19 +65,15 @@ html(lang="en")
                         </tbody>
                     </table>
             h3.compare-similar-items Compare Similar Items
-            .row
-                .col-md-12.nbp
+            .owl-carousel.owl-theme
             h3.customer-reviews Customer Reviews
             .row
                 .col-md-6.reviews
-            //- .row
-            //-     .col.col-md-12
-            //-         .longDescription
-            //-         script.
-            //-             let elem = document.createElement('textarea')
-            //-             elem.innerHTML = '!{longDescription}'
-            //-             document.querySelector('.longDescription').innerHTML = elem.value
         include includes/footer
+
+        script(src="/libs/jQuery/jquery-2.2.4.min.js")
+        script(src="/libs/OwlCarousel2/owl.carousel.min.js")
+
         script let itemId = #{itemId}
         script(src="/js/nbp.js")
         script(src="/js/reviews.js")

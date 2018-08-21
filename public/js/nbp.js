@@ -4,10 +4,10 @@
     fetch(`/nbp/${itemId}`).then(response => response.json()).then(data => {
         if (data) {
             if (data.errors) throw new Error(data.errors[0].message);
-            
-            for (let i = 0; i < 5; i++) {
+
+            for (let i = 0; i < data.length; i++) {
                 let item = d.createElement('div');
-                item.classList.add('nbp-item');
+                item.classList.add('item');
                 item.setAttribute('data-itemId', data[i].itemId);
 
                 let thumbnailImage = d.createElement('img');
@@ -33,8 +33,18 @@
                 item.appendChild(anchor);
                 item.appendChild(name);
 
-                d.querySelector('.nbp').appendChild(item);
+                d.querySelector('.owl-carousel').appendChild(item);
             }
+
+            $(document).ready(function () {
+                $('.owl-carousel').owlCarousel({
+                    loop: true,
+                    margin: 10,
+                    items: 5,
+                    autoplay: true,
+                    slideBy: 5
+                });
+            });
         }
     }).catch(err => { });
 
