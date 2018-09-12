@@ -1,5 +1,4 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-family: 'Open Sans', sans-serif !important;
     font-size: 16px;
 }
@@ -59,9 +58,18 @@ body {
 .form-control:focus{
     box-shadow: none !important;
     border-color: #ced4da;
-    /* border-radius: 0; */
 }
 
 #button-addon {
     border-color: #cccccc;
+}
+
+@media screen and (max-width:768px) {
+    nav {
+        margin-top: 1rem;
+    }
+
+    .logo-wrapper {
+        text-align: center;
+    }
 }

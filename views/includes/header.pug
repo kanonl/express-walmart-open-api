@@ -1,15 +1,14 @@
 header.container-fluid
     .row
-        .col-md-4
+        .col-md-4.logo-wrapper
             a(href="/")
-                img(src="/images/wmt_h_r_c.jpg" width="328" alt="Walmart Open API" title="Walmart Open API")
+                img(src="/images/wmt_h_r_c.jpg" width="328" alt="Walmart Open API" title="Walmart Open API" class="img-fluid")
         .col-md-4.vcenter
             form(action="/search" method="GET")
                 .input-group
                     input.form-control(type="text" id="search" name="q" required)
                     .input-group-append
                         button.btn.btn-outline-secondary(type="submit" id="button-addon") Search
-        .col-md-4
     nav.nav.justify-content-center
         each category, index in categories
             if index < 12
