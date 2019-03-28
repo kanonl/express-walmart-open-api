@@ -56,7 +56,7 @@
             url.searchParams.set('odnHeight', 450);
             url.searchParams.set('odnWidth', 450);
 
-            d.querySelector('.img-fluid').src = url.toString();
+            d.querySelector('.largeImage').src = url.toString();
             setThumbnailBorderColor('#eeeeee');
             thumbnail.style.borderColor = '#007bff';
         });

@@ -9,7 +9,7 @@ html(lang="en")
         main.container(role="main")
             .row
                 .col.col-md-6.col-sm-12
-                    img.img-fluid(src=largeImage alt=name title=name id='detail')
+                    img.img-fluid.largeImage(src=largeImage alt=name title=name id='detail')
                     each image in imageEntities
                         if image.entityType === 'SECONDARY'
                             img.img-fluid.thumbnail(src=image.thumbnailImage)
