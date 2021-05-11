@@ -13,15 +13,9 @@
   "dependencies": {
     "compression": "^1.7.4",
     "express": "^4.17.1",
-<<<<<<< HEAD
     "helmet": "^3.23.3",
     "pug": "^2.0.4",
     "request": "^2.88.2"
-=======
-    "helmet": "^3.21.2",
-    "pug": "^2.0.4",
-    "request": "^2.88.0"
->>>>>>> 71006566498eeb55ee3398098e8ef3173c0901b9
   },
   "devDependencies": {
     "nodemon": "^1.19.4"
