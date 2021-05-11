@@ -11,13 +11,13 @@
   "author": "Kanon Lo",
   "license": "ISC",
   "dependencies": {
-    "compression": "^1.7.3",
-    "express": "^4.16.3",
-    "helmet": "^3.13.0",
-    "pug": "^2.0.3",
-    "request": "^2.87.0"
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "helmet": "^3.23.3",
+    "pug": "^2.0.4",
+    "request": "^2.88.2"
   },
   "devDependencies": {
-    "nodemon": "^1.18.3"
+    "nodemon": "^1.19.4"
   }
 }

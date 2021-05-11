@@ -42,4 +42,4 @@ fs.readFile(path.join(__dirname, 'taxonomy.json'), 'utf8', (err, data) => {
     app.locals.categories = taxonomy.categories;
 });
 
-app.listen(process.env.PORT || 5000);
+app.listen(process.env.PORT || 8080);

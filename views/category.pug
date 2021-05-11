@@ -11,9 +11,10 @@ html(lang="en")
                         .item
                             - let productURL = `/p/${item.itemId}/${encodeURI(item.name.toString().toLowerCase().replace(/[^a-z0-9 ]/ig, '').replace(/\s+/g, '-'))}`
                             a(href=productURL): img(src=item.largeImage alt=item.name title=item.name)                            
+                            
                             -
                                 if (item.name.length > 70)
-                                    item.name = item.name.substring(0, 70) + ' ...'
+                                        item.name = item.name.substring(0, 70) + ' ...'
                             a.name(href=productURL)= item.name
                             ul
                                 if item.modelNumber
